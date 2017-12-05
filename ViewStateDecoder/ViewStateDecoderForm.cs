@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace ViewStateDecoder
 {
-    public partial class Form1 : Form
+    public partial class Frm_ViewStateDecoder : Form
     {
-        public Form1()
+        public Frm_ViewStateDecoder()
         {
             InitializeComponent();
         }
