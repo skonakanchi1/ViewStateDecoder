@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtViewState = new System.Windows.Forms.TextBox();
+            this.txtDecodedBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnDecode = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(764, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Decode >>";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -55,23 +45,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Encoded ViewState :";
             // 
-            // textBox1
+            // txtViewState
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(280, 115);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(461, 74);
-            this.textBox1.TabIndex = 2;
+            this.txtViewState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViewState.Location = new System.Drawing.Point(280, 115);
+            this.txtViewState.Multiline = true;
+            this.txtViewState.Name = "txtViewState";
+            this.txtViewState.Size = new System.Drawing.Size(461, 74);
+            this.txtViewState.TabIndex = 2;
             // 
-            // textBox2
+            // txtDecodedBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(280, 338);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(461, 163);
-            this.textBox2.TabIndex = 4;
+            this.txtDecodedBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDecodedBox.Location = new System.Drawing.Point(280, 338);
+            this.txtDecodedBox.Multiline = true;
+            this.txtDecodedBox.Name = "txtDecodedBox";
+            this.txtDecodedBox.Size = new System.Drawing.Size(461, 163);
+            this.txtDecodedBox.TabIndex = 4;
             // 
             // label2
             // 
@@ -83,16 +73,27 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Decoded ViewState :";
             // 
+            // btnDecode
+            // 
+            this.btnDecode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecode.Location = new System.Drawing.Point(764, 267);
+            this.btnDecode.Name = "btnDecode";
+            this.btnDecode.Size = new System.Drawing.Size(75, 23);
+            this.btnDecode.TabIndex = 0;
+            this.btnDecode.Text = "Decode >>";
+            this.btnDecode.UseVisualStyleBackColor = true;
+            this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
+            // 
             // Frm_ViewStateDecoder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 662);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDecodedBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtViewState);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDecode);
             this.Name = "Frm_ViewStateDecoder";
             this.Text = "ViewState Decoder";
             this.ResumeLayout(false);
@@ -101,12 +102,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtViewState;
+        private System.Windows.Forms.TextBox txtDecodedBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnDecode;
     }
 }
 
